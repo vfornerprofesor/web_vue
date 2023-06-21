@@ -1,39 +1,61 @@
 <template>
-    <div class="menu">
-      <div class="logo">
-        <img src="@/img/logo.png" alt="Logo">
-        <h1>Vicent Forner - Professor</h1>
-      </div>
-      <div class="opciones">
-        <ul>
-          <li>
-            <a href="#">Unitats</a>
-            <ul class="desplegable">
-              <li>
-                <a href="#">PXSI - II - 2n BAT</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Ferramentes</a>
-            <ul class="desplegable">
-              <li>
-                <a href="#">Generador de QR</a>
-              </li>
-              <li>
-                <a href="#">Sorteig</a>
-              </li>
-              <li>
-                <a href="#">TIC</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Contacte</a>
-          </li>
-        </ul>
-      </div>
+  
+   <nav class="navbar navbar-expand-lg">
+    <router-link class="navbar-brand" to="/">
+        <img src="@/img/logo.png" alt="Logo" height="30">
+        Vicent Forner - Professor
+    </router-link>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <router-link to="/" class="nav-link">Inicio</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/unitats" class="nav-link">Unitats</router-link>
+        </li>
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <router-link to="/cursos">
+            <p class="nav-link nav-title">Cursos</p>
+            </router-link>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link class="dropdown-item" to="/cursos/2nbat">
+              PXSI - II - 2n BAT
+            </router-link>
+          </div>
+        </li>
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <router-link to="/ferramentes">
+            <p class="nav-link nav-title">Ferramentes</p>
+            </router-link>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link class="dropdown-item" to="/ferramentes/qr">
+              Generador de QR
+            </router-link>
+            <router-link class="dropdown-item" to="/ferramentes/sorteig">
+              Sorteig
+            </router-link>
+            <div class="dropdown-divider"></div>
+            <router-link class="dropdown-item" to="/ferramentes/tic">
+              TIC
+            </router-link>
+          </div>
+        </li>
+        <li class="nav-item">
+          <router-link to="/contacte" class="nav-link">Contacte</router-link>
+        </li>
+      </ul>
     </div>
+  </nav>
   </template>
   
   <script>
@@ -44,49 +66,60 @@
   </script>
   
   <style scoped>
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f2f2f2;
-    padding: 10px;
+
+    /* MENU */
+    .navbar {
+    background-color: var(--main-color);
+    
+  }
+
+  #menu {
+    background-color: var(--main-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .navbar-brand {
+    color: #fff;
+    font-weight: bold;
   }
   
-  .logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+  .nav-title {
+    display: inline;
+    color: white;
   }
-  
-  .opciones ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .opciones li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .opciones li a {
+
+  .nav-title:hover {
+    color: var(--black-color);
     text-decoration: none;
-    color: #333;
   }
-  
-  .desplegable {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    padding: 10px;
+
+  a:has(.nav-title) {
+    text-decoration: none;
   }
-  
-  .desplegable li {
-    margin-bottom: 5px;
+
+  .nav-link, router-link {
+    color: #fff;
   }
-  
-  .opciones li:hover .desplegable {
-    display: block;
+
+  .nav-link:hover, router-link:hover {
+    color: var(--black-color);
   }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+  .dropdown-menu, .dropdown-item {
+    background-color: var(--main-color);
+    color: #fff;
+  }
+  .dropdown-menu:hover, .dropdown-item:hover{
+    background-color: var(--main-color);
+    color: var(--black-color);
+  }
+
   </style>
   
