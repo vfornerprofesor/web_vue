@@ -1,9 +1,13 @@
 <script setup>
-
+import Title1 from '../components/blocks/Title1.vue';
 </script>
 
 <template>
-  <h1>UNITATS</h1>
+  <Title1
+    title="UNITATS"
+  ></Title1>
+
+  
 </template>
 
 <style scoped>

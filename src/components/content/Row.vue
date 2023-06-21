@@ -7,6 +7,7 @@
   </template>
   <script>
 export default {
+  name: 'MenuComponent',
   props: {
     classeExistentRow: {
       type: String,

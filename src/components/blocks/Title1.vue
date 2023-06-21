@@ -7,6 +7,7 @@
 
 <script>
 export default {
+  name: 'Title1Component',
   props: {
     title: {
       type: String,
