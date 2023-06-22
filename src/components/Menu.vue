@@ -25,7 +25,7 @@
             </router-link>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <router-link class="dropdown-item" to="/cursos/2nbat">
+            <router-link class="dropdown-item" to="/cursos/2bat">
               PXSI - II - 2n BAT
             </router-link>
           </div>

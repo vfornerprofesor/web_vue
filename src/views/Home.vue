@@ -1,11 +1,11 @@
 <script setup>
-import Title1 from '../components/blocks/Title1.vue';
+import Title from '../components/blocks/Title.vue';
 import Row from '../components/content/Row.vue';
 import Column from '../components/content/Column.vue';
 </script>
 
 <template>
-    <Title1 title="Vicent Forner" subtitle="Professor d'Informàtica"></Title1>
+    <Title number=1 title="Vicent Forner" subtitle="Professor d'Informàtica"></Title>
     <Row>
         <Column>
             <p>Aquesta pàgina conté recursos d’informàtica per a tots els nivells educatius de l’educació secundària

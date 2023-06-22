@@ -1,13 +1,14 @@
 <script setup>
-import Title1 from '../components/blocks/Title1.vue';
+import Title from '../components/blocks/Title.vue';
 
 </script>
 
 <template>
-    <Title1
+    <Title
+        number=1
         title="Pàgina no trobada"
         subtitle="Encara s'està muntant el web... Disculpa les molèsties"
-    ></Title1>
+    ></Title>
 </template>
 
 <style scoped>

@@ -21,6 +21,20 @@ name: 'MenuComponent',
   </script>
   
   <style>
-  
+  .two_cols {
+    width: 50%;
+  }
+
+  .three_cols {
+    width: 33%;
+  }
+
+  .four_cols {
+    width: 25%;
+  }
+
+  .five_cols {
+    width: 20%;
+  }
   </style>
   

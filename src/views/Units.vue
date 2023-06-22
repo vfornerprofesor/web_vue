@@ -1,11 +1,12 @@
 <script setup>
-import Title1 from '../components/blocks/Title1.vue';
+import Title from '../components/blocks/Title.vue';
 </script>
 
 <template>
-  <Title1
+  <Title
     title="UNITATS"
-  ></Title1>
+    number=1
+  ></Title>
 
   
 </template>
