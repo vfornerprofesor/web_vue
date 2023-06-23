@@ -8,8 +8,8 @@ import './styles/blocks.css'
 import './styles/buttons.css'
 
 //ROUTER
-import './router/router.js'
-import router from './router/router.js';
+import './utils/router/router.js'
+import router from './utils/router/router.js';
 
 
 const app = createApp(App);

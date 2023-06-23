@@ -3,18 +3,10 @@ import Title from '../components/blocks/Title.vue';
 import Unit from '../components/blocks/Unit.vue';
 import Row from '../components/content/Row.vue';
 import Column from '../components/content/Column.vue';
-import Text from '../components/content/Text.vue';
-import Content from '../components/blocks/Content.vue';
 </script>
 
 <template>
   <Title title="Cursos" number=1></Title>
-
-  <Content>
-    <Text
-      text="hola açò és una linia amb *una negreta* i també amb un [enllaç a jo que se](https://www.google.es) i ja està"
-    ></Text>
-  </Content>
 
   <Title title="ESO" number=3 centered="true"></Title>
   <Row>

@@ -7,22 +7,22 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        component: () => import('../views/Home.vue')
+        component: () => import('../../views/Home.vue')
     },
     {
         path: '/unitats',
         name: 'Unitats',
-        component: () => import('../views/Units.vue')
+        component: () => import('../../views/Units.vue')
     },
     {
         path: '/cursos',
         name: 'Cursos',
-        component: () => import('../views/Courses.vue')
+        component: () => import('../../views/Courses.vue')
     },
     {
         path: '/404',
         name: 'NotFound',
-        component: () => import('../views/NotFound.vue')
+        component: () => import('../../views/NotFound.vue')
     },
     {
         path: '/:catchAll(.*)', // Ruta de captura de cualquier otra ruta no definida

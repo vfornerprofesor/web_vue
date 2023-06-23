@@ -1,6 +1,6 @@
 <template>
   
-  <router-link class="unit-link" :to="link_page">
+  <router-link class="unit-link" :to="getLinkPage(link_page)">
         <div class="unit">
             <!--<img :src="link_img" alt="" class="unit-img img-fluid">-->
             <img :src="getImageLink(img_name)" alt="" class="unit-img img-fluid" />
@@ -12,7 +12,8 @@
 </template>
    
    <script>
-   import img from '@/img/img.js';
+   import img from '@/utils/img.js';
+   import urls from '@/utils/urls.js';
 
    export default {
      name: 'UnitComponent',
@@ -31,6 +32,10 @@
     getImageLink(imageName) {
       const image = img[imageName];
       return image;
+    },
+    getLinkPage(linkPage) {
+      const url = urls[linkPage];
+      return url;
     }
   }
    }

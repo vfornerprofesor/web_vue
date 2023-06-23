@@ -1,6 +1,6 @@
 <template>
     
-    <iframe :src="link">
+    <iframe :src="link" :style="[componentStyle, extraStyle]">
 
     </iframe>
   </template>
@@ -11,7 +11,18 @@
     link: {
       type: String,
       required: true
+    },
+    extraStyle: {
+      type: Object,
+      default: () => ({})
     }
+  },
+  data() {
+    return {
+      componentStyle: {
+        //backgroundColor: 'blue',
+      }
+    };
   }
 }
   </script>
