@@ -19,16 +19,16 @@ import Content from '../components/blocks/Content.vue';
   <Title title="ESO" number=3 centered="true"></Title>
   <Row>
     <Column classeAdicional="four_cols text-center">
-      <Unit link_img="imagen1" link_page="/cursos/1eso" title="1r d'ESO"></Unit>
+      <Unit img_name="logo" link_page="/cursos/1eso" title="1r d'ESO"></Unit>
     </Column>
     <Column classeAdicional="four_cols text-center">
-      <Unit link_img="imagen2" link_page="/cursos/2eso" title="2n d'ESO"></Unit>
+      <Unit img_name="css" link_page="/cursos/2eso" title="2n d'ESO"></Unit>
     </Column>
     <Column classeAdicional="four_cols text-center">
-      <Unit link_img="imagen3" link_page="/cursos/3eso" title="3r d'ESO"></Unit>
+      <Unit img_name="html" link_page="/cursos/3eso" title="3r d'ESO"></Unit>
     </Column>
     <Column classeAdicional="four_cols text-center">
-      <Unit link_img="imagen1" link_page="/cursos/4eso" title="4t d'ESO"></Unit>
+      <Unit img_name="css" link_page="/cursos/4eso" title="4t d'ESO"></Unit>
     </Column>
   </Row>
 
