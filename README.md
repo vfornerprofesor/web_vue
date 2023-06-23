@@ -27,3 +27,7 @@ npm run dev
 ```sh
 npm run build
 ```
+1) Modificar el fitxer vite.config.js per activar la linia "base: '/web_vue/',"
+2) Llançar el npm run build
+3) Llançar el script.sh
+4) Fer commit i push
