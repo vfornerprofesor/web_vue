@@ -15,11 +15,15 @@
   <div v-if="number == 3" class="block_black block_h3">
     <h3 :class="{ 'centered-text': centered }">{{ title }}</h3>
   </div>
+
+  <div v-if="number == 4">
+    <h4 :class="{ 'centered-text': centered }">{{ title }}</h4>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Title2Component',
+  name: 'TitleComponent',
   props: {
     title: {
       type: String,
