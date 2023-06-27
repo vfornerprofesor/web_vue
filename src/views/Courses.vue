@@ -6,40 +6,42 @@ import Column from '../components/content/Column.vue';
 </script>
 
 <template>
-  <Title title="Cursos" number=1></Title>
+  <Title title="Cursos" :number=1></Title>
 
-  <Title title="ESO" number=3 centered="true"></Title>
+  <Title title="ESO" :number=3 :centered="true"></Title>
   <Row>
     <Column classeAdicional="four_cols text-center">
-      <Unit img_name="logo" link_page="/cursos/1eso" title="1r d'ESO"></Unit>
+      <Unit img_name="1eso" link_page_name="1eso"></Unit>
     </Column>
     <Column classeAdicional="four_cols text-center">
-      <Unit img_name="css" link_page="/cursos/2eso" title="2n d'ESO"></Unit>
+      <Unit img_name="2eso" link_page_name="2eso"></Unit>
     </Column>
     <Column classeAdicional="four_cols text-center">
-      <Unit img_name="html" link_page="/cursos/3eso" title="3r d'ESO"></Unit>
+      <Unit img_name="3eso" link_page_name="3eso"></Unit>
     </Column>
     <Column classeAdicional="four_cols text-center">
-      <Unit img_name="css" link_page="/cursos/4eso" title="4t d'ESO"></Unit>
+      <Unit img_name="4eso" link_page_name="4eso"></Unit>
     </Column>
   </Row>
 
-  <Title title="BATXILLERAT" number=3 centered="true"></Title>
+  <Title title="Batxillerat" :number=3 :centered="true"></Title>
   <Row>
     <Column classeAdicional="four_cols text-center">
-      <Unit link_img="src/img/logo.png" link_page="/cursos/1bat" title="1r de BAT"></Unit>
+      <Unit img_name="1bat" link_page_name="1bat"></Unit>
     </Column>
     <Column classeAdicional="four_cols text-center">
-      <Unit link_img="src/img/logo.png" link_page="/cursos/2bat" title="2n de BAT"></Unit>
+      <Unit img_name="2bat" link_page_name="2bat"></Unit>
     </Column>
   </Row>
 
-  <Title title="CICLE FORMATIU SMX" number=3 centered="true"></Title>
+  <Title title="Sistemes microinformàtics i xarxes" :number=3 :centered="true"></Title>
   <Row>
     <Column classeAdicional="four_cols text-center">
-      <Unit link_img="src/img/logo.png" link_page="/cursos/awe" title="Aplicacions web"></Unit>
+      <Unit img_name="awe" link_page_name="awe"></Unit>
     </Column>
   </Row>
+
+  
 </template>
 
 

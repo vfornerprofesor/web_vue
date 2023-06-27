@@ -1,9 +1,9 @@
 <template>
   
-  <router-link class="unit-link" :to="getLinkPage(link_page)">
-        <div class="unit">
+  <router-link class="unit-link" :to="getLinkPage(link_page_name)">
+        <div class="unit block_colored">
             <!--<img :src="link_img" alt="" class="unit-img img-fluid">-->
-            <img :src="getImageLink(img_name)" alt="" class="unit-img img-fluid" />
+            <img :src="getImageLink(img_name)" alt="" class="unit-img" />
             <br>
             <button v-if="title" class="btn btn-primary unit-title">{{ title }}</button>
         </div>
@@ -18,7 +18,7 @@
    export default {
      name: 'UnitComponent',
      props: {
-    link_page: {
+    link_page_name: {
       type: String
     },
     img_name: {
@@ -33,8 +33,8 @@
       const image = img[imageName];
       return image;
     },
-    getLinkPage(linkPage) {
-      const url = urls[linkPage];
+    getLinkPage(linkPageName) {
+      const url = urls[linkPageName];
       return url;
     }
   }
@@ -42,13 +42,29 @@
    </script>
    
    <style scoped>
+
  .unit {
+    text-align: center;
     display: inline-block;
     align-items: center;
- }
+  }
 
-   .unit-title {
-    width: 100%;
- }
+  .unit-img {
+    height: 12em;
+    /*max-width: 12em;*/
+  }
+
+  .unit-title {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 15em;
+    margin: 1em auto;
+  }
+
+  .unit-title:link,  .unit-title:visited,  .unit-title:hover,  .unit-title:active,
+    .unit-link:link,  .unit-link:visited,  .unit-link:hover,  .unit-link:active {
+    text-decoration: none;
+  }
    </style>
    

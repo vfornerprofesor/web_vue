@@ -40,28 +40,7 @@
     color: #fff;
   }
 
-  .unit {
-    text-align: center;
-  }
-
-  .unit-img {
-    /*height: 20em;*/
-    max-width: 12em;
-    max-height: 12em;
-  }
-
-  .unit-title {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    width: 15em;
-    margin: 1em auto;
-  }
-
-  .unit-title:link,  .unit-title:visited,  .unit-title:hover,  .unit-title:active,
-    .unit-link:link,  .unit-link:visited,  .unit-link:hover,  .unit-link:active {
-    text-decoration: none;
-  }
+  
 
   .code {
     white-space: break-spaces;
