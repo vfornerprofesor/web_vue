@@ -21,8 +21,8 @@ import Column from '../components/content/Column.vue';
         </Column>
     </Row>
 
-    <Row classeAdicionalBlock="block_color">
-        <Column classeAdicional="text-center">
+    <Row additionalClassBlock="block_color">
+        <Column additionalClass="text-center">
             <h2>ESO</h2>
             <a href="#" class="btn btn-primary btn-primary-inverse">1 ESO</a>
             <br><br>
@@ -32,13 +32,13 @@ import Column from '../components/content/Column.vue';
             <br><br>
             <a href="#" class="btn btn-primary btn-primary-inverse">4 ESO</a>
         </Column>
-        <Column classeAdicional="text-center">
+        <Column additionalClass="text-center">
             <h2>BATXILLERAT</h2>
             <a href="#" class="btn btn-primary btn-primary-inverse">1 BAT</a>
             <br><br>
             <a href="#" class="btn btn-primary btn-primary-inverse">2 BAT</a>
         </Column>
-        <Column classeAdicional="text-center">
+        <Column additionalClass="text-center">
             <h2>SMX</h2>
             <a href="#" class="btn btn-primary btn-primary-inverse">Aplicacions web</a>
         </Column>

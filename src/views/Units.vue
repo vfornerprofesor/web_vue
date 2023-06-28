@@ -4,10 +4,40 @@ import Unit from '../components/blocks/Unit.vue';
 import Content from '../components/blocks/Content.vue';
 import Column from '../components/content/Column.vue';
 import Row from '../components/content/Row.vue';
+import List from '../components/content/List.vue';
+import Text from '../components/content/Text.vue';
+import Code from '../components/content/Code.vue';
+import { component as VueCodeHighlight } from 'vue-code-highlight';
+
 </script>
 
 <template>
   <Title title="Unitats" :number=1></Title>
+
+  <Code language="javascript">
+    <pre>
+      var a = 1;
+      var b = 2;
+      console.log(a + b);
+    </pre>
+    </Code>
+
+    <Code language="python">
+      <pre>
+        def hello():
+            print("Hola, mundo!")
+        
+        hello()
+      </pre>
+    </Code>
+    <Code language="html">
+        <div>
+          <p>Hola</p>
+        </div>
+      </pre>
+    </Code>
+
+
 
   <div class="div_accordion" @click="clicAccordeon('programacio')" id_own="programacio" closed="true">
     <span :class="['accordion-arrow', { 'accordion-arrow-up': false }]">
@@ -22,7 +52,7 @@ import Row from '../components/content/Row.vue';
   <div id_parent="basic">
     <Content>
       <Row>
-        <Column classeAdicional="text-center">
+        <Column additionalClass="text-center">
           <Unit img_name="pensament_computacional" link_page_name="pensament_computacional"
             title="Pensament Computacional">
           </Unit>
@@ -40,10 +70,10 @@ import Row from '../components/content/Row.vue';
   <div id_parent="blocs">
     <Content>
       <Row>
-        <Column classeAdicional="text-center">
+        <Column additionalClass="text-center">
           <Unit img_name="scratch" link_page_name="scratch" title="Scratch"></Unit>
         </Column>
-        <Column classeAdicional="text-center">
+        <Column additionalClass="text-center">
           <Unit img_name="app_inventor" link_page_name="app_inventor" title="App Inventor"></Unit>
         </Column>
       </Row>
@@ -69,7 +99,15 @@ export default {
         console.log('Mostrant ', element);
         var elements = document.querySelectorAll('[id_parent="' + element + '"]');
         for (var el of elements) {
-          el.hidden = false;
+          //el.hidden = false;
+          el.classList.remove('accordion-hide');
+          void el.offsetWidth;
+          el.classList.add('accordion-show');
+
+        }
+        var arrow = header.getElementsByClassName('accordion-arrow')[0];
+        if (arrow) {
+          arrow.classList.add('accordion-arrow-up');
         }
         header.setAttribute('closed', 'false');
       } else {
@@ -78,12 +116,20 @@ export default {
         //OCULTAR
         var elements = document.querySelectorAll('[id_parent="' + element + '"]');
         for (var el of elements) {
-          el.hidden = true;
+          //el.hidden = true;
+          el.classList.remove('accordion-show');
+          void el.offsetWidth;
+          el.classList.add('accordion-hide');
+
           var id_own_el = el.getAttribute('id_own');
           var closed_el = el.getAttribute('closed');
           if (id_own_el && closed_el == 'false') {
             this.clicAccordeon(id_own_el);
           }
+        }
+        var arrow = header.getElementsByClassName('accordion-arrow')[0];
+        if (arrow) {
+          arrow.classList.remove('accordion-arrow-up');
         }
         header.setAttribute('closed', 'true');
       }
@@ -95,7 +141,8 @@ export default {
         var id_own = el.getAttribute('id_own');
         var children = document.querySelectorAll('[id_parent="' + id_own + '"]');
         for (var child of children) {
-          child.hidden = true;
+          //child.hidden = true;
+          child.classList.add('accordion-hide');
         }
       }
     },
@@ -104,10 +151,18 @@ export default {
 </script>
 
 <style scoped>
+.accordion-hide {
+  display: none;
+}
+
+.accordion-show {
+  display: block;
+}
 
 .div_accordion {
   position: relative;
 }
+
 .accordion-arrow {
   position: absolute;
   top: calc(50% - 10px);
@@ -122,6 +177,7 @@ export default {
 }
 
 .accordion-arrow-up {
-  transform: translateY(calc(-50%-20px)) rotate(-180deg);
+  transform: rotate(-180deg);
+  transition: transform 0.3s;
 }
 </style>

@@ -10,34 +10,34 @@ import Column from '../components/content/Column.vue';
 
   <Title title="ESO" :number=3 :centered="true"></Title>
   <Row>
-    <Column classeAdicional="four_cols text-center">
-      <Unit img_name="1eso" link_page_name="1eso"></Unit>
+    <Column additionalClass="four_cols text-center">
+      <Unit img_name="1eso" link_page_name="1eso" additionalClass="block_colored"></Unit>
     </Column>
-    <Column classeAdicional="four_cols text-center">
-      <Unit img_name="2eso" link_page_name="2eso"></Unit>
+    <Column additionalClass="four_cols text-center">
+      <Unit img_name="2eso" link_page_name="2eso" additionalClass="block_colored"></Unit>
     </Column>
-    <Column classeAdicional="four_cols text-center">
-      <Unit img_name="3eso" link_page_name="3eso"></Unit>
+    <Column additionalClass="four_cols text-center">
+      <Unit img_name="3eso" link_page_name="3eso" additionalClass="block_colored"></Unit>
     </Column>
-    <Column classeAdicional="four_cols text-center">
-      <Unit img_name="4eso" link_page_name="4eso"></Unit>
+    <Column additionalClass="four_cols text-center">
+      <Unit img_name="4eso" link_page_name="4eso" additionalClass="block_colored"></Unit>
     </Column>
   </Row>
 
   <Title title="Batxillerat" :number=3 :centered="true"></Title>
   <Row>
-    <Column classeAdicional="four_cols text-center">
-      <Unit img_name="1bat" link_page_name="1bat"></Unit>
+    <Column additionalClass="four_cols text-center">
+      <Unit img_name="1bat" link_page_name="1bat" additionalClass="block_colored"></Unit>
     </Column>
-    <Column classeAdicional="four_cols text-center">
-      <Unit img_name="2bat" link_page_name="2bat"></Unit>
+    <Column additionalClass="four_cols text-center">
+      <Unit img_name="2bat" link_page_name="2bat" additionalClass="block_colored"></Unit>
     </Column>
   </Row>
 
   <Title title="Sistemes microinformàtics i xarxes" :number=3 :centered="true"></Title>
   <Row>
-    <Column classeAdicional="four_cols text-center">
-      <Unit img_name="awe" link_page_name="awe"></Unit>
+    <Column additionalClass="four_cols text-center">
+      <Unit img_name="awe" link_page_name="awe" additionalClass="block_colored"></Unit>
     </Column>
   </Row>
 

@@ -1,6 +1,6 @@
 <template>
-    <div :class="[classeExistentBlock, classeAdicionalBlock]">
-        <div :class="[classeExistentRow, classeAdicionalRow]">
+    <div :class="[existentClassBlock, additionalClassBlock]">
+        <div :class="[existentClassRow, additionalClassRow]">
             <slot></slot>
         </div>
     </div>
@@ -9,19 +9,19 @@
 export default {
   name: 'MenuComponent',
   props: {
-    classeExistentRow: {
+    existentClassRow: {
       type: String,
       default: 'row' // Valor por defecto: cadena vacía
     },
-    classeAdicionalRow: {
+    additionalClassRow: {
       type: String,
       default: '' // Valor por defecto: cadena vacía
     },
-    classeExistentBlock: {
+    existentClassBlock: {
       type: String,
       default: 'block' // Valor por defecto: cadena vacía
     },
-    classeAdicionalBlock: {
+    additionalClassBlock: {
       type: String,
       default: '' // Valor por defecto: cadena vacía
     }

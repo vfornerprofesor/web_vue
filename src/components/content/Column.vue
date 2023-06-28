@@ -1,5 +1,5 @@
 <template>
-    <div :class="[classeExistent, classeAdicional]">
+    <div :class="[existentClass, additionalClass]">
       <slot></slot>
     </div>
   </template>
@@ -8,11 +8,11 @@
   export default {
 name: 'MenuComponent',
   props: {
-    classeExistent: {
+    existentClass: {
       type: String,
       default: 'col' // Valor por defecto: cadena vacía
     },
-    classeAdicional: {
+    additionalClass: {
       type: String,
       default: '' // Valor por defecto: cadena vacía
     }

@@ -1,29 +1,33 @@
 <template>
-    <div>
-      <p v-html="formatText(text)"></p>
-    </div>
-  </template>
+  <div>
+    <p :style="elementStyles" v-html="formatText(text)"></p>
+  </div>
+</template>
   
-  <script>
-  export default {
-    props: {
-      text: {
-        type: String,
-        required: true
-      }
+<script>
+import mixin from '@/utils/mixin.js';
+
+export default {
+  mixins: [mixin],
+  props: {
+    text: {
+      type: String,
+      required: true
     },
-    methods: {
-      formatText(text) {
-        // Reemplaza los asteriscos (*) por etiquetas <strong> para el texto en negrita
-        const formattedText = text.replace(/\*(.*?)\*/g, '<strong>$1</strong>');
-        // Reemplaza los corchetes [] por etiquetas <a> para los enlaces
-        const finalText = formattedText.replace(
-          /\[(.*?)\]\((.*?)\)/g,
-          '<a href="$2">$1</a>'
-        );
-        return finalText;
-      }
+  },
+  methods: {
+    formatText(text) {
+      // Reemplaza los asteriscos (*) por etiquetas <strong> para el texto en negrita
+      const formattedText = text.replace(/\*(.*?)\*/g, '<strong>$1</strong>');
+      // Reemplaza los corchetes [] por etiquetas <a> para los enlaces
+      const finalText = formattedText.replace(
+        /\[(.*?)\]\((.*?)\)/g,
+        '<a href="$2">$1</a>'
+      );
+      return finalText;
     }
-  };
-  </script>
+  },
+
+};
+</script>
   
