@@ -1,1 +1,0 @@
-import{T as t}from"./Title-aaa2ae85.js";import{o as e,f as a}from"./index-c310ec11.js";const l={__name:"NotFound",setup(o){return(s,r)=>(e(),a(t,{number:"1",title:"Pàgina no trobada",subtitle:"Encara s'està muntant el web... Disculpa les molèsties"}))}};export{l as default};
