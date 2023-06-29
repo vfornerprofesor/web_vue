@@ -31,6 +31,12 @@ const routes = [
     // Agrega más rutas según tus necesidades
 ];
 
+import { additionalRoutesProgramming } from './router_programming';
+additionalRoutesProgramming.forEach((route) => {
+    routes.push(route);
+});
+  
+
 const router = createRouter({
     history: createWebHistory(),
     routes
