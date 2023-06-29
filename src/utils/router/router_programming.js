@@ -1,18 +1,14 @@
-import { router } from './router.js';
 
-export function addRoute(route) {
-  router.addRoute(route);
-}
 
 // Define tus nuevas rutas aquí
-const additionalRoutes = [
-    {
+var additionalRoutesProgrammingGeneral = [
+      {
         path: '/unitats/programacio/pensament_computacional',
         component: () => import('@/views/units/programming/PensamentComputacional.vue')
       },
       {
         path: '/unitats/programacio/scratch',
-        component: () => import('@/views/units/programming/Scratch.vue')
+        component: () => import('@/views/units/programming/scratch/Scratch.vue')
       },
       {
         path: '/unitats/programacio/app_inventor',
@@ -64,8 +60,13 @@ const additionalRoutes = [
       },
   // Más rutas...
 ];
-
-// Añade las rutas al enrutador
-additionalRoutes.forEach((route) => {
-  addRoute(route);
-});
+var additionalRoutesProgrammingScratch = [
+  {
+    path: '/unitats/programacio/scratch/laberint',
+    component: () => import('@/views/units/programming/scratch/Scratch_Laberint.vue')
+  },
+]
+const additionalRoutesProgramming = [].concat(additionalRoutesProgrammingGeneral)
+.concat(additionalRoutesProgrammingScratch);
+debugger;
+export { additionalRoutesProgramming };

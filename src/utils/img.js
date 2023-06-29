@@ -54,4 +54,6 @@ export default {
     "ia" : ia,
     "ia_ferramentes" : ia_ferramentes,
     "full_calcul" : full_calcul,
+
+
 };

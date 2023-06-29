@@ -8,6 +8,7 @@
 import mixin from '@/utils/mixin.js';
 
 export default {
+  name: 'Text',
   mixins: [mixin],
   props: {
     text: {
@@ -30,4 +31,7 @@ export default {
 
 };
 </script>
-  
+<!--
+      text="Este es un ejemplo de texto *en negrita* con un [enlace](https://www.ejemplo.com)."
+
+-->

@@ -8,6 +8,8 @@ export default {
     "1bat" : "/cursos/1bat",
     "2bat" : "/cursos/2bat",
     "awe" : "/cursos/awe",
+
+
     //PROGRAMACIÓ
     "pensament_computacional" : '/unitats/programacio/pensament_computacional',
     "scratch" : '/unitats/programacio/scratch',
@@ -23,4 +25,10 @@ export default {
     "ia" : '/unitats/programacio/ia',
     "ia_ferramentes" : '/unitats/programacio/ia_ferramentes',
     "full_calcul" : '/unitats/programacio/full_calcul',
+
+    //SCRATCH
+    "scratch_laberint": '/unitats/programacio/scratch/laberint',
+    "scratch_flappy_bird": '/unitats/programacio/scratch/flappy_bird',
+    "scratch_space_invaders": '/unitats/programacio/scratch/space_invaders',
+    "scratch_pong": '/unitats/programacio/scratch/pong',
 };
